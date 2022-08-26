@@ -1,0 +1,53 @@
+#title {
+    height: 100vh;
+    background-image: url(../img/tit_bg01.png);
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#title .inner {
+    position: relative;
+    height: 100%;
+}
+#title .inner ul.tit_link {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#title .inner ul.tit_link li {
+    width: 210px;
+    height: 135px;
+    margin-bottom: 20px; 
+    transition: all 500ms;
+}
+#title .inner ul.tit_link li:last-child{
+    margin-bottom: 0;
+}
+#title .inner ul.tit_link li a {
+    display: block;
+    font-size: 0;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;    
+}
+#title .inner ul.tit_link li:nth-child(2) a{
+    background-image: url(../img/tit_silde_btn02.png);
+}
+#title .inner ul.tit_link li:nth-child(3) a{
+    background-image: url(../img/tit_silde_btn03.png);
+}
+#title .inner ul.tit_link li:nth-child(4) a{
+    background-image: url(../img/tit_silde_btn04.png);
+}
+#title .inner ul.tit_link li:hover:nth-child(2) a{
+    background-image: url(../img/tit_silde_btn02_sel.png);
+}
+#title .inner ul.tit_link li:hover:nth-child(3) a{
+    background-image: url(../img/tit_silde_btn03_sel.png);
+}
+#title .inner ul.tit_link li:hover:nth-child(4) a{
+    background-image: url(../img/tit_silde_btn04_sel.png);
+}

@@ -1,0 +1,176 @@
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 100;
+}
+
+header .inner {
+    padding: 20px 0;
+    position: relative;
+}
+
+header .inner h1 {
+    max-width: 180px;
+    margin-right: 80px;
+}
+
+header .inner h1 a {
+    font-size: 0;
+    display: block;
+}
+
+header .inner nav {}
+
+header .inner nav>ul {}
+
+header .inner nav>ul li {}
+
+header .inner nav>ul li h2 {}
+
+header .inner nav>ul li h2 a {
+    font-size: 18px;
+    padding: 20px 15px;
+    font-weight: 500;
+    transition: color 500ms;
+}
+
+header .inner nav>ul li:hover h2 a {
+    color: #f52334;
+}
+
+header .inner nav>ul>li .gnb_sub {
+    position: fixed;
+    left: 0;
+    top: 94px;
+    width: 100%;
+    background-color: #fff;
+    height: 300px;
+    border-top: 1px solid #e4e4e4;
+    display: none;
+}
+
+header .inner nav>ul>li .gnb_sub .subWrap {
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+    height: 300px;
+}
+
+header .inner nav>ul>li .gnb_sub .subWrap .sub_box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+header .inner nav>ul>li .gnb_sub .subWrap .sub_box .leftMenu {
+    padding-top: 30px;
+    float: left;
+}
+
+header .inner nav>ul>li .gnb_sub .subWrap .sub_box h2 {
+    font-size: 25px;
+    font-weight: 500;
+    color: #000;
+    margin-right: 125px;
+    position: relative;
+
+}
+
+header .inner nav>ul>li .gnb_sub .subWrap .sub_box h2::after {
+    content: "";
+    width: 70px;
+    height: 1px;
+    position: absolute;
+    right: -100px;
+    top: 50%;
+    transform: translateY(-1px);
+    background-color: rgba(10, 31, 50, 0.2);
+}
+
+header .inner nav>ul>li .gnb_sub .subWrap .sub_box ul {}
+
+header .inner nav>ul>li .gnb_sub .subWrap .sub_box ul li {
+    margin-bottom: 10px;
+}
+
+header .inner nav>ul>li .gnb_sub .subWrap .sub_box ul li a {
+    color: #333;
+    font-size: 20px;
+    font-weight: 300;
+    transition: color 0.5s;
+}
+
+header .inner nav>ul>li .gnb_sub .subWrap .sub_box ul li a:hover {
+    color: #f52334;
+}
+
+header .inner nav>ul>li .gnb_sub .subWrap .sub_box .rightBg {
+    width: 70%;
+    height: 300px;
+    background-color: #adda;
+    float: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header .inner .menu_right {
+    position: absolute;
+    right: 0;
+    gap: 20px;
+}
+
+header .inner .menu_right ul.member {}
+
+header .inner .menu_right ul.member li {}
+
+header .inner .menu_right ul.member li:first-child {
+    border-right: 2px solid #000;
+}
+
+header .inner .menu_right ul.member li a {
+    display: block;
+    font-weight: 700;
+    padding: 0 10px;
+}
+
+header .inner .menu_right a.fran {
+    display: block;
+    border: 2px solid #f52334;
+    padding: 15px 4.16vw;
+    border-radius: 30px;
+    color: #f52334;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+header .inner .menu_right a.ham {
+    display: block;
+    width: 35px;
+    height: 20px;
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
+    position: relative;
+    transition: all 500ms;
+}
+
+header .inner .menu_right a.ham:hover {
+    border-color: #f52334;
+}
+
+header .inner .menu_right a.ham::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 500ms;
+}
+
+header .inner .menu_right a.ham:hover::after {
+    background-color: #f52334;
+}

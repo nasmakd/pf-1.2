@@ -1,0 +1,99 @@
+footer {}
+
+footer .footerBox {
+    background-color: #3b2120;
+    padding: 80px 260px 60px 260px;
+    gap: 30px;
+}
+
+footer .footerBox .resNav {
+    display: none;
+}
+
+footer .footerBox .left {
+    /* padding-right: 80px; */
+}
+
+footer .footerBox * {
+    color: #fff;
+}
+
+footer .footerBox .left ul.footNav {
+    gap: 20px;
+}
+
+footer .footerBox .left ul.footNav li {}
+
+footer .footerBox .left ul.footNav li h2 {}
+
+footer .footerBox .left ul.footNav li h2 a {
+    font-size: 1vw;
+}
+
+footer .footerBox .left .footTxt {
+    margin-top: 30px;
+}
+
+footer .footerBox .left .footTxt * {
+    color: rgba(236, 236, 236, 0.7);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+footer .footerBox .left .footTxt p {}
+
+footer .footerBox .left .footTxt address {}
+
+footer .footerBox .center {
+    padding: 0 145px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+footer .footerBox .center h1 {}
+
+footer .footerBox .center h1 a {
+    display: block;
+}
+
+footer .footerBox .center h1 img {}
+
+footer .footerBox .right {
+    /* margin-left: 4.16vw; */
+}
+
+footer .footerBox .right ul.footNav {
+    gap: 20px;
+}
+
+footer .footerBox .right ul.footNav li {}
+
+footer .footerBox .right ul.footNav li h2 {}
+
+footer .footerBox .right ul.footNav li h2 a {
+    font-size: 1vw;
+}
+
+footer .footerBox .right ul.footSns {
+    margin-top: 40px;
+    gap: 20px;
+}
+
+footer .footerBox .right ul.footSns li {}
+
+footer .footerBox .right ul.footSns li a {
+    display: block;
+}
+
+footer .footerBox .right ul.footSns li a img {}
+
+footer p.copyright {
+    line-height: 50px;
+    background-color: #2d1817;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    text-align: center;
+    font-family: 'Roboto';
+    letter-spacing: -0.5px;
+}

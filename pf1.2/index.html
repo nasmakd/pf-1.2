@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Noto+Sans+KR:wght@300;400;700&family=Nunito+Sans:wght@300;400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/title.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script>
+        $(function(){
+            let headerH = $("header").height()
+            $(".gnb_sub").css("top", headerH);
+
+            // 상단 메뉴 hover
+            $(".gnb > li").hover(function(){
+                let liIndex = $(this).index();
+                if($(this).find(".leftMenu").children().is("ul")){
+                   $(this).children(".gnb_sub").stop().slideDown();
+                   $(this).siblings().children(".gnb_sub").hide();
+                }
+               $(".rightBg").css("background-image","url(img/menuBg0"+(liIndex+1)+".jpg)");
+            }, function(){
+                $(".gnb_sub").stop().slideUp();
+            });
+
+            // #product 이미지 hover 시 이미지 바꾸기
+            $("#product .inner ul.pr_menu li").hover(function(){
+                let pr_list = $(this).index()+1;
+                $(this).find("img").attr("src","img/pr_menu0"+pr_list+"_c.png");
+            }, function(){
+                pr_list = $(this).index()+1;
+                $(this).find("img").attr("src","img/pr_menu0"+pr_list+".png");
+            });
+
+            // #follow 이미지 hover 스타일링 
+            let fimgH = $("#follow ul li img").height();
+            $("#follow ul li").css("height",fimgH);
+            $(window).resize(function(){
+                fimgH = $("#follow ul li img").height();
+                $("#follow ul li").css("height",fimgH);
+            }); 
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="inner flex flexAlignCenter">
+            <h1>
+                <a href="">홍루이젠<img src="img/logo.png" alt="홍루이젠 로고"></a>
+            </h1>
+            <nav>
+                <ul class="gnb flex">
+                    <li>
+                        <h2><a href="">브랜드소개</a></h2>
+                        <div class="gnb_sub">
+                            <div class="subWrap">
+                                <div class="sub_box">
+                                    <div class="leftMenu flex flexAlignFlex_Start">
+                                        <h2>브랜드소개</h2>
+                                        <ul>
+                                            <li><a href="">홍루이젠 소개</a></li>
+                                            <li><a href="">브랜드 철학</a></li>
+                                            <li><a href="">히스토리</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="rightBg"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h2><a href="">브랜드관</a></h2>
+                        <div class="gnb_sub">
+                            <div class="subWrap">
+                                <div class="sub_box">
+                                    <div class="leftMenu flex flexAlignFlex_Start">
+                                        <h2>브랜드관</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h2><a href="">메뉴</a></h2>
+                        <div class="gnb_sub">
+                            <div class="subWrap">
+                                <div class="sub_box">
+                                    <div class="leftMenu flex flexAlignFlex_Start">
+                                        <h2>메뉴</h2>
+                                        <ul>
+                                            <li><a href="">전체</a></li>
+                                            <li><a href="">신제품</a></li>
+                                            <li><a href="">소프트 샌드위치</a></li>
+                                            <li><a href="">갓군샌</a></li>
+                                            <li><a href="">프레시 샌드위치</a></li>
+                                            <li><a href="">디저트</a></li>
+                                            <li><a href="">음료</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="rightBg"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h2><a href="">매장안내</a></h2>
+                        <div class="gnb_sub">
+                            <div class="subWrap">
+                                <div class="sub_box">
+                                    <div class="leftMenu flex flexAlignFlex_Start">
+                                        <h2>매장안내</h2>
+                                        <ul>
+                                            <li><a href="">매장 찾기</a></li>
+                                            <li><a href="">단체주문</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="rightBg"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h2><a href="">커뮤니티</a></h2>
+                        <div class="gnb_sub">
+                            <div class="subWrap">
+                                <div class="sub_box">
+                                    <div class="leftMenu flex flexAlignFlex_Start">
+                                        <h2>커뮤니티</h2>
+                                        <ul>
+                                            <li><a href="">홍루이젠소식</a></li>
+                                            <li><a href="">프레스센터</a></li>
+                                            <li><a href="">이벤트</a></li>
+                                            <li><a href="">고객의 소리</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="rightBg"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h2><a href="">쇼핑하기</a></h2>
+                        <div class="gnb_sub">
+                            <div class="subWrap">
+                                <div class="sub_box">
+                                    <div class="leftMenu flex flexAlignFlex_Start">
+                                        <h2>쇼핑하기</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="menu_right flex flexAlignCenter">
+                <ul class="member flex en_txt">
+                    <li><a href="">LOGIN</a></li>
+                    <li><a href="">JOIN</a></li>
+                </ul>
+                <a href="" class="fran">프랜차이즈</a>
+                <a href="" class="ham"></a>
+            </div>
+        </div>
+    </header>
+    <div id="title">
+        <div class="inner">
+            <ul class="tit_link">
+                <li class="hide"><a href="">쿠키앤크림 샌드위치 출시</a></li>
+                <li><a href="">아이스티 3종 출시</a></li>
+                <li><a href="">초코퐁당 샌드위치 리뉴얼</a></li>
+                <li><a href="">누구나 가능한 소자본 창업</a></li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <section id="product">
+            <div class="inner flex flexColumn flexAlignCenter padding100">
+                <h3 class="en_txt main_h3">PRODUCT</h3>
+                <ul class="pr_tab flex">
+                    <li><button>NEW</button></li>
+                    <li><button>SANDWICH</button></li>
+                    <li><button>DESSERT</button></li>
+                    <li><button>DRINK</button></li>
+                </ul>
+                <ul class="pr_menu flex flexCenter">
+                    <li>
+                        <a href="">
+                            <img src="img/pr_menu01.png" alt="복숭아 아이스티">
+                            <strong>복숭아 아이스티</strong>
+                            <span>청량함을 담은 상큼달콤 복숭아 아이스티</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/pr_menu02.png" alt="청포도 아이스티">
+                            <strong>청포도 아이스티</strong>
+                            <span>청량함을 담은 상큼달콤 청포도 아이스티</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/pr_menu03.png" alt="딸기 아이스티">
+                            <strong>딸기 아이스티</strong>
+                            <span>청량함을 담은 상큼달콤 딸기 아이스티</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/pr_menu04.png" alt="쿠키앤크림 샌드위치">
+                            <strong>쿠키앤크림 샌드위치</strong>
+                            <span>부드러운 우유크림 사이에 달콤 바삭 쿠키가 듬뿍!</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="pr_link">
+                    <a href="" class="new">What's New?</a>
+                    <a href="" class="all_pr">All Product</a>
+                </div>
+            </div>
+        </section>
+        <section id="event">
+            <div class="inner flex flexColumn flexAlignCenter padding100">
+                <h3 class="en_txt main_h3">EVENT</h3>
+                <ul class="event_list flex flexCenter">
+                    <li>
+                        <div class="evBox flex flexCenter">
+                            <a href="">
+                                <img src="img/event01.jpg" alt="이벤트 이미지1">
+                                <span>홍루이젠 소비자패널 3기 모집</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="evBox">
+                            <a href="">
+                                <img src="img/event02.png" alt="이벤트 이미지2">
+                                <span>메이플월넛 출시 프로모션</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="evBox">
+                            <a href="">
+                                <img src="img/event03.jpg" alt="이벤트 이미지3">
+                                <span>봄맞이 핫템 경품증정 이벤트 - 나이키 한정판 쏜다!</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="news">
+            <div class="inner flex flexColumn flexAlignCenter padding100">
+                <h3 class="en_txt main_h3">NEWS</h3>
+                <ul>
+                    <li>
+                        <div class="news_cont">
+                            <p class="newsTitle"><span>NEWS</span>홍루이젠, 여름 신메뉴 ‘아이스티’ 3종 출시</p>
+                            <p class="newsTxt ko_txt">샌드위치 전문 브랜드 홍루이젠이 청량함을 담은 아이스티 3종을 19일 출시했다고 밝혔다.이번에 선보인 아이스티는 ‘리프레싱 타임’이라는 컨셉으로 무더운 올여름 더위에 지친 고객들...</p>
+                            <a href="">READ MORE</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="news_cont">
+                            <p class="newsTitle"><span>NEWS</span>홍루이젠, 신메뉴 NEW 쿠키앤크림 샌드위치 출시</p>
+                            <p class="newsTxt ko_txt">샌드위치 전문 브랜드 홍루이젠은 다가오는 30일에 소비자들에게 큰 사랑을 받았던 ‘쿠키앤크림 샌드위치’를 보다 업그레이드하여 재출시한다고 밝혔다.‘NEW 쿠키앤크림 샌드위치’는 부...</p>
+                            <a href="">READ MORE</a>
+                        </div>
+                    </li>
+                </ul>
+                <a href="" class="all_news">All News</a>
+            </div>
+        </section>
+        <section id="video">
+            <div class="inner flex flexColumn flexAlignCenter padding100">
+                <h3 class="en_txt main_h3">HONGRUIZHEN VIDEO</h3>
+                <div class="video_main flex flexAlignFlex_End">
+                    <div class="video_play">
+                        <div class="videoBox"></div>
+                        <iframe class="hide" width="640" height="360" src="https://www.youtube.com/embed/QyQEY9zDQbI?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video_cont">
+                        <h4>홍루이젠 TV</h4>
+                        <p>오늘의 샌드위치 베이커리<br />홍루이젠</p>
+                        <p>홍루이젠의 새로운 소식을 영상으로 만나보세요!</p>
+                        <ul class="flex">
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="follow">
+            <div class="inner flex flexColumn flexAlignCenter padding100">
+                <h3 class="en_txt main_h3">FOLLOW US</h3>
+                <ul class="flex flexCenter">
+                    <li>
+                        <img src="img/follow1.jpg" alt="">
+                        <a href=""></a>
+                        <div class="insta"><span>@hungruichenkorea</span></div>
+                    </li>
+                    <li>
+                        <img src="img/follow2.jpg" alt="">
+                        <a href=""></a>
+                        <div class="insta"><span>@hungruichenkorea</span></div>
+                    </li>
+                    <li>
+                        <img src="img/follow3.jpg" alt="">
+                        <a href=""></a>
+                        <div class="insta"><span>@hungruichenkorea</span></div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <div class="txtAni">
+            <p class="en_txt">SIMPLE·SWEET·SOFT SANDWICH HUNG RUI CHEN SINCE 1947</p>
+            <p class="en_txt">SIMPLE·SWEET·SOFT SANDWICH HUNG RUI CHEN SINCE 1947</p>
+    </div>
+    <aside>
+        <ul>
+            <li><a href=""><span>FIND<br />US!</span></a></li>
+            <li><a href=""><span>SHOP<br />NOW</span></a></li>
+        </ul>
+    </aside>
+    <footer>
+        <div class="footerBox flex">
+                <ul class="resNav">
+                    <li>
+                        <h2><a href="">브랜드 소개</a></h2>
+                    </li>
+                    <li>
+                        <h2><a href="">브랜드관</a></h2>
+                    </li>
+                    <li>
+                        <h2><a href="">매장안내</a></h2>
+                    </li>
+                    <li>
+                        <h2><a href="">메뉴</a></h2>
+                    </li>
+                    <li>
+                        <h2><a href="">커뮤니티</a></h2>
+                    </li>
+                    <li>
+                        <h2><a href="">쇼핑하기</a></h2>
+                    </li>
+                </ul>
+                <div class="left">
+                    <ul class="footNav flex">
+                        <li>
+                            <h2><a href="">브랜드 소개</a></h2>
+                        </li>
+                        <li>
+                            <h2><a href="">브랜드관</a></h2>
+                        </li>
+                        <li>
+                            <h2><a href="">매장안내</a></h2>
+                        </li>
+                    </ul>
+                    <div class="footTxt ko_txt">
+                        <p>(주)타이웨이 대표이사 : 송원섭 </p>
+                        <address>주소 : 경기도 고양시 덕양구 삼송로 12 반도유스퀘어 701,702호</address>
+                        <p>사업자등록번호 : 730-86-00779 가맹문의 대표번호 : 1566-8025 </p>
+                    </div>
+                </div>
+                <div class="center">
+                    <h1 class="foot_logo">
+                        <a href=""><img src="img/foot_logo.png" alt="홍루이젠 하단 로고"></a>
+                    </h1>
+                </div>
+                <div class="right">
+                    <ul class="footNav flex">
+                        <li>
+                            <h2><a href="">메뉴</a></h2>
+                        </li>
+                        <li>
+                            <h2><a href="">커뮤니티</a></h2>
+                        </li>
+                        <li>
+                            <h2><a href="">쇼핑하기</a></h2>
+                        </li>
+                    </ul>
+                    <ul class="footSns flex flexCenter">
+                        <li><a href=""><img src="img/insta.png" alt=""></a></li>
+                        <li><a href=""><img src="img/facebook.png" alt=""></a></li>
+                        <li><a href=""><img src="img/youtube.png" alt=""></a></li>
+                    </ul>
+                </div>
+        </div>
+        <p class="copyright">Copyright (c) HONG RUI CHEN CORP All right reserved.</p>
+    </footer>
+
+</body>
+</html>

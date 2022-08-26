@@ -1,0 +1,115 @@
+@font-face {
+    font-family: "s-core";
+    src: local("S-CoreDream-3Light"),
+        url(../font/SCDream3.woff) format("woff");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "s-core";
+    src: local("S-CoreDream-5Medium"),
+        url(../font/SCDream5.woff) format("woff");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "s-core";
+    src: local("S-CoreDream-7ExtraBold"),
+        url(../font/SCDream7.woff) format("woff");
+    font-weight: 700;
+}
+
+* {
+    color: #401e20;
+    box-sizing: border-box;
+}
+
+/* 폰트 지정 */
+body {
+    font-family: "Nunito Sans", "s-core", sans-serif;
+}
+
+.ko_txt {
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.en_txt {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* txt 정렬 */
+.txtCenter {
+    text-align: center;
+}
+
+/* 컨텐츠 숨김 처리 */
+.hide {
+    display: none;
+}
+
+/* flex  */
+.flex {
+    display: flex;
+}
+
+.flexBetween {
+    justify-content: space-between;
+}
+
+.flexAround {
+    justify-content: space-around;
+}
+
+.flexEvenly {
+    justify-content: space-evenly;
+}
+
+.flexCenter {
+    justify-content: center;
+}
+
+.flexEnd {
+    justify-content: flex-end;
+}
+
+.flexColumn {
+    flex-direction: column;
+}
+
+.flexAlignCenter {
+    align-items: center;
+}
+
+.flexAlignFlex_end {
+    align-items: flex-end;
+}
+
+.flexAlignFlex_Start {
+    align-items: flex-start;
+}
+
+.flexWrap {
+    flex-wrap: wrap;
+}
+
+/* inner */
+.inner {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* padding */
+.padding50 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.padding100 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.padding150 {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}

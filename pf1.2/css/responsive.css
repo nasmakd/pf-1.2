@@ -1,0 +1,330 @@
+@media screen and (max-width: 1400px){
+    header .inner .menu_right a.fran {
+        display: none;
+    }
+}
+@media screen and (max-width: 1200px) {
+    /* 헤더 */
+    header .inner .menu_right ul.member {
+        display: none;
+    }
+
+    header .inner nav>ul>li .gnb_sub .subWrap .sub_box .rightBg {
+        display: none;
+    }
+
+    /* product */
+    #product .inner ul.pr_menu li{
+        width: calc(100% / 3);
+    }
+    #product .inner ul.pr_menu li:last-child {
+        display: none;
+    }
+
+    /* event */
+    #event .inner ul.event_list li .evBox a span {
+        width: 100%;
+        left: initial;
+        transform: scaleX(1.1);
+        font-size: 18px;
+    }
+
+    /* news */
+    #news .inner ul li {
+        flex-direction: column;
+    }
+
+    #news .inner ul li .news_cont {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    /* 하단 텍스트 애니메이션 */
+    .txtAni {
+        height: 180px;
+    }
+
+    .txtAni p {
+        height: 180px;
+        line-height: 180px;
+        font-size: 5.208vw;
+    }
+
+    .txtAni p::before {
+        width: 6.14vw;
+        height: 6.77vw;
+    }
+
+    /* 푸터 */
+    footer .footerBox {
+        flex-direction: column;
+        padding-top: 20px;
+        position: relative;
+        padding-bottom: 150px;
+    }
+
+    ul.footNav {
+        display: none;
+    }
+
+    footer .footerBox .resNav {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+    }
+    footer .footerBox .resNav::before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: #776463;
+        left: 0;
+        top: 50px;
+    }
+
+    footer .footerBox .left .footTxt {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    footer .footerBox .center {
+        border: none;
+        margin-top: 20px;
+    }
+
+    footer .footerBox .center h1 a {
+        text-align: center;
+    }
+
+    footer .footerBox .center h1 a img {
+        display: initial;
+    }
+
+    footer .footerBox .right {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    /* 헤더 */
+    header .inner nav>ul {
+        display: none;
+    }
+
+    /* 타이틀 */
+    #title .inner ul.tit_link {
+        top: initial;
+        bottom: 10px;
+        transform: translate(-50%, 0);
+        right: initial;
+        left: 50%;
+        display: flex;
+        gap: 10px
+    }
+
+    #title .inner ul.tit_link li {
+        width: 10.93vw;
+        height: 7.03vw;
+    }
+
+    /* 메인 */
+    .main_h3 {
+        font-size: 35px;
+        white-space: nowrap;
+    }
+
+    /* product */
+    #product .inner ul.pr_menu li a strong {
+        font-size: 20px;
+    }
+
+    /* event */
+    #event .inner ul.event_list {
+        gap: 15px;
+    }
+
+    #event .inner ul.event_list li {
+        width: calc(100% / 3);
+        padding: 0;
+    }
+
+    #event .inner ul.event_list li .evBox a span::after {
+        display: none;
+    }
+
+    /* news */
+    #news .inner ul li .news_cont p.newsTitle {
+        font-size: 16px;
+    }
+
+    #news .inner ul li .news_cont p.newsTxt {
+        display: none;
+    }
+
+    /* video */
+    #video .inner .video_main {
+        flex-direction: column;
+    }
+
+    #video .inner .video_main .video_play {
+        width: 100%;
+    }
+
+    #video .inner .video_main .video_cont {
+        width: 100%;
+        text-align: center;
+    }
+
+    #video .inner .video_main .video_cont ul {
+        margin-top: 50px;
+        justify-content: center;
+    }
+
+    #video .inner .video_main .video_cont h4 {
+        border: none;
+        padding: 0;
+    }
+
+    #video .inner .video_main .video_cont h4::before,
+    #video .inner .video_main .video_cont h4::after {
+        display: none;
+    }
+
+    #video .inner .video_main .video_cont p:nth-of-type(1) {
+        font-size: 28px;
+    }
+
+    /* follow */
+    #follow .inner ul li .insta {
+        min-width: 19px;
+        min-height: 19px;
+    }
+
+    #follow .inner ul li .insta span {
+        font-size: 14px;
+    }
+
+    /* 하단 텍스트 애니메이션 */
+    .txtAni {
+        height: 12.69vw;
+    }
+
+    .txtAni p {
+        height: 12.69vw;
+        line-height: 12.69vw;
+    }
+
+    /* 푸터 */
+    footer .footerBox {
+        padding-right: 100px;
+        padding-left: 100px;
+    }
+
+    footer .footerBox .left .footTxt * {
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    /* event */
+    #event .inner ul.event_list li .evBox a span {
+        font-size: 14px;
+    }
+
+    /* product */
+    #product .inner ul.pr_menu li {
+        width: 100%;
+    }
+    #product .inner .pr_link {
+        font-size: 0;
+        width: 100%;
+    }
+
+    #product .inner .pr_link a {
+        font-size: 14px;
+        width: calc((100% / 2) - 20px);
+    }
+
+    #product .inner ul.pr_menu li:nth-child(2),
+    #product .inner ul.pr_menu li:nth-child(3) {
+        display: none;
+    }
+    /* news */
+    #news .inner ul{
+        width: 95%;
+    }
+    /* video */
+    #video .inner .video_main .video_cont p:nth-of-type(1) {
+        font-size: 23px;
+    }
+
+    /* follow */
+    #follow .inner ul {
+        width: 85%;
+    }
+
+    #follow .inner ul li {
+        margin: 0 5px;
+    }
+
+    #follow .inner ul li .insta span {
+        font-size: 0;
+    }
+
+    /* 푸터 */
+    footer .footerBox {
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    footer .footerBox .right ul.footSns {
+        margin-top: 25px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .main_h3{
+        font-size: 28px;
+    }
+    /* product */
+    #product .inner ul.pr_tab li{
+        margin-right: 20px;
+    }
+    /* event */
+    #event .inner ul.event_list li .evBox a span {
+        font-size: 12px;
+    }
+
+    /* news */
+    #news .inner ul li::before {
+        display: none;
+    }
+    
+    /* 푸터 */
+    footer .footerBox {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    footer .footerBox .resNav{
+        border-bottom: 1px solid #776463;
+        padding-bottom: 10px;
+    }
+    footer .footerBox .resNav::before{
+        display: none;
+    }
+    footer .footerBox .center{
+        padding: 0 100px;
+        margin-top: 0;
+    }
+    footer .footerBox .right ul.footSns{
+        margin-top: 10px;
+    }
+}
